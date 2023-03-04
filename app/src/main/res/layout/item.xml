@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.annewandroid2023.domain.model.WorkoutDate" />
+
+        <variable
+            name="date"
+            type="java.util.Date" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_dateInWeek"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33dp"
+                    android:textAllCaps="true"
+                    android:textColor="#7B7E91"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:dateOfWeek="@{date}"
+                    app:highLightCurrentDate="@{date}"
+                    tools:text="MON" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="33dp"
+                    android:textColor="#1E0A3C"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:dateOfMonth="@{date}"
+                    app:highLightCurrentDate="@{date}"
+                    tools:text="20" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_sub_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="2"
+                tools:listitem="@layout/sub_item" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1A767676" />
+    </LinearLayout>
+</layout>

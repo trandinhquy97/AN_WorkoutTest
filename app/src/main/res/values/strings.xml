@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ANNewAndroid2023</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error">Error</string>
+    <string name="missed">Missed</string>
+    <string name="completed">Completed</string>
+    <string name="exercise">%1$d exercises</string>
+</resources>
